@@ -59,8 +59,8 @@ function App() {
   }, [darkMode]);
 
   
-  const socialsImgPath = 'https://raw.githubusercontent.com/arnav123098/profile-readme-maker/06707807454b1c9be29b9226dab733f0814067a6/src/assets/socials/';
-  const techStackImgPath = 'https://raw.githubusercontent.com/arnav123098/profile-readme-maker/06707807454b1c9be29b9226dab733f0814067a6/src/assets/tech-stack/';
+  const socialsImgPath = 'https://raw.githubusercontent.com/arnav123098/profile-readme-maker/main/src/assets/socials/';
+  const techStackImgPath = 'https://raw.githubusercontent.com/arnav123098/profile-readme-maker/main/src/assets/tech-stack/';
 
   useEffect(() => {
     // build markdown
