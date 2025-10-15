@@ -78,7 +78,7 @@ function App() {
         .map(k => `<a href='https://${k + (k === 'codepen' ? '.io/' : '.com/') + socials[k]}'><img src='${socialsImgPath + k + '.svg'}' alt='${k}' height=40 width=40 /></a>`)
         .join(' ')
     if (socialsLinks) sections.push(`## Connect with me\n` + socialsLinks)
-console.log(socialsLinks)
+
     if (techStack.length) sections.push(`## My tech stack\n` + 
         techStack
         .map(k => `<img src='${techStackImgPath + k + '.svg'}' alt='${k}' height=40 width=40 />`)
