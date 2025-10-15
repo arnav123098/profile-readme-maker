@@ -59,8 +59,8 @@ function App() {
   }, [darkMode]);
 
   
-  const socialsImgPath = 'https://github.com/arnav123098/profile-readme-maker/raw/main/assets/socials/';
-  const techStackImgPath = 'https://github.com/arnav123098/profile-readme-maker/raw/main/assets/tech-stack';
+  const socialsImgPath = 'https://raw.githubusercontent.com/arnav123098/profile-readme-maker/06707807454b1c9be29b9226dab733f0814067a6/src/assets/socials/';
+  const techStackImgPath = 'https://raw.githubusercontent.com/arnav123098/profile-readme-maker/06707807454b1c9be29b9226dab733f0814067a6/src/assets/tech-stack/';
 
   useEffect(() => {
     // build markdown
@@ -75,13 +75,13 @@ function App() {
 
     const socialsLinks = Object.keys(socials)
         .filter(k => socials[k])
-        .map(k => `[![${k}](${socialsImgPath + k + '.svg'})](${socials[k]})`)
+        .map(k => `<a href='https://${k + (k === 'codepen' ? '.io/' : '.com/') + socials[k]}'><img src='${socialsImgPath + k + '.svg'}' alt='${k}' height=40 width=40 /></a>`)
         .join(' ')
     if (socialsLinks) sections.push(`## Connect with me\n` + socialsLinks)
-
+console.log(socialsLinks)
     if (techStack.length) sections.push(`## My tech stack\n` + 
         techStack
-        .map(k => `![${k}](${techStackImgPath + k + '.svg'})`)
+        .map(k => `<img src='${techStackImgPath + k + '.svg'}' alt='${k}' height=40 width=40 />`)
         .join(' '))
 
     if (stats.length) sections.push(`## Github stats\n` +
