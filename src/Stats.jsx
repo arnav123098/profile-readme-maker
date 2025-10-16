@@ -1,7 +1,7 @@
 import React from "react";
 import MarkdownPreview from '@uiw/react-markdown-preview';
 
-function Stats({username, stats, handleStats}) {
+function Stats({statList, stats, handleStats}) {
     
     return (
         <>  
@@ -10,7 +10,7 @@ function Stats({username, stats, handleStats}) {
             {Object.keys(stats).map(stat => {
                 return (
                     <div key={stat}>
-                        <input type="checkbox" name={stat} onChange={handleStats} />
+                        <input type="checkbox" name={stat} onChange={handleStats} checked={statList.includes(stat)} />
                         {stat}
                         <MarkdownPreview className="stat-md" source={stats[stat]} />
                     </div>
