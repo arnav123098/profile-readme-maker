@@ -8,7 +8,7 @@ const game_engines = ['Unity', 'Unreal Engine']
 const ml = ['PyTorch', 'Keras', 'Tensorflow', 'Huggingface', 'Scikit-Learn', 'NumPy', 'Matplotlib', 'SciPy', 'Pandas', 'Seaborn']
 const others = ['AWS', 'Github', 'Git', 'Gitlab', 'Gitpod', 'Babel', 'Docker', 'Eslint', 'Kubernetes', 'Notion', 'Obsidian', 'Linux', 'Raspberry Pi', 'Postman', 'OpenCV', 'Figma', 'Photoshop', 'Adobe XD', 'Framer', 'Blender', 'Vercel', 'Netlify', 'Wordpress', 'Arduino']
 
-function TechStack({handleTechStack}) {
+function TechStack({techStackList, handleTechStack}) {
     const techStack = {
         languages,
         frameworks_and_libraries,
@@ -27,7 +27,7 @@ function TechStack({handleTechStack}) {
                             <h2>{list}</h2>
                             {techStack[list].map(item => 
                                 <div key={item} className='tech-stack-checkbox'>
-                                    <input type='checkbox' name={item} onChange={handleTechStack}/>
+                                    <input type='checkbox' name={item} onChange={handleTechStack} checked={techStackList.includes(item)} />
                                     {item}
                                 </div>
                         )}
