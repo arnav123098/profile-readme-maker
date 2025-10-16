@@ -162,7 +162,7 @@ function App() {
       {
         step === 4 &&
         <div className='field'>
-          <TechStack handleTechStack={handleTechStack} />
+          <TechStack techStackList={techStack} handleTechStack={handleTechStack} />
           <StepChanger step={step} setStep={setStep} />
         </div>
       }
@@ -177,7 +177,7 @@ function App() {
         step === 6 &&
         <div className='field'>
           <StepChanger step={step} setStep={setStep} />
-          <Stats username={username} stats={statsDisplay} handleStats={handleStats} />
+          <Stats statList={stats} stats={statsDisplay} handleStats={handleStats} />
         </div>
       }
       </div>
@@ -218,4 +218,3 @@ function App() {
 }
 
 export default App
-
