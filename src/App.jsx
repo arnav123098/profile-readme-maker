@@ -33,8 +33,8 @@ function App() {
     substack: '',
     kaggle: '',
     youtube: '',
-    hakerearth: '',
-    hakerrank: '',
+    hackerearth: '',
+    hackerrank: '',
     leetcode: '',
     stackoverflow: ''
   })
@@ -81,7 +81,7 @@ function App() {
 
     if (techStack.length) sections.push(`## My tech stack\n` + 
         techStack
-        .map(k => `<img src='${techStackImgPath + k + '.svg'}' alt='${k}' height=40 width=40 />`)
+        .map(k => `<img src='${techStackImgPath + k.toLowerCase() + '.svg'}' alt='${k}' height=40 width=40 />`)
         .join(' '))
 
     if (stats.length) sections.push(`## Github stats\n` +
@@ -218,3 +218,4 @@ function App() {
 }
 
 export default App
+
