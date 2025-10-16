@@ -2,7 +2,6 @@
 a minimal README.md maker built with React
 
 ## example
-![display image](https://media.tenor.com/ITc1hNBSH_wAAAAC/coding-typing.gif)
 # Hi! I'm Arnav
 ml/web. mostly into language models lately.
 
