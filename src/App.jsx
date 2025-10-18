@@ -135,7 +135,7 @@ function App() {
       {
         step === 1 && 
         <div id='home'>
-          <a id='star-on-github' href='https://github.com/arnav123098/profile-readme-maker'><FontAwesomeIcon icon={faGithub} /> Star on Github</a>
+          <a id='star-on-github' href='https://github.com/arnav123098/profile-readme-maker' target='_blank' ><FontAwesomeIcon icon={faGithub} /> Star on Github</a>
           <h1>make your README.md</h1>
           <input className='text-input' id='username-input' name='username' placeholder='your github username*' value={username} onChange={({target}) => setUsername(target.value)} onKeyDown={handleKeyDown} />
           <StepChanger step={step} setStep={setStep} />
